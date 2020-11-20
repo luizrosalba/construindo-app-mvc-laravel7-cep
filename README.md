@@ -9,7 +9,7 @@ A aplicação:
 - Busca endereços Salvos 
 
 - Utilizamos Docker para facilitar as configurações de ambiente 
-- 
+
 
 
 # Laravel 
@@ -29,7 +29,21 @@ A aplicação:
 - git clone : https://github.com/laravel/laravel.git construindo-app-mvc-laravel7-vep
 - extrair a pasta com o docker-compose (utils)
 - colar na raíz do projeto 
-- 
+
+
+# Configurando
+
+- .env.example (variáveis de ambiente)
+- criamos um .env removendo diversas informações (não será commitado gitignores)
+- DB host será o nome do database 
+- baixando dependências 
+- Abri o docker-composer no container 
+- baixou todo necessário 
+- apk add git
+- sai e abri de novo para reinicar com git 
+
+
+
 
 
 
