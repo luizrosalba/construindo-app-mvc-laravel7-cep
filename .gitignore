@@ -14,3 +14,7 @@ docker/database/ca-key.pem
 docker/database/ca.pem
 docker/database/client-cert.pem
 docker/database/client-key.pem
+/workspace/docker/database/private_key.pem
+/workspace/docker/database/public_key.pem
+/workspace/docker/database/server-cert.pem
+/workspace/docker/database/server-key.pem
