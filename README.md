@@ -1,3 +1,40 @@
+# Construindo uma aplicação MVC com Laravel 7 para consulta de CEP
+
+Projeto da DIO para Construindo uma aplicação MVC com Laravel 7 para consulta de CEP. 
+
+A aplicação: 
+
+- Busca o CEP na API ViaCep
+- Salva o endereço no Banco de Dados
+- Busca endereços Salvos 
+
+- Utilizamos Docker para facilitar as configurações de ambiente 
+- 
+
+
+# Laravel 
+
+- Laravel nasceu em 2011
+- É um Framework facil de usar com sintaxe elegante
+- componentes nativos para gerenciamento de usuários, cache, banco , storages e mais 
+- Integração com plataformas como AWS , GCP , etc 
+- Cria uma camada para libs de terceiros , onde vc só usa o Laravel 
+ 
+
+# Instalação 
+
+- Opção : composer global require laravel/installer
+
+- Opção 2  (usando o docker): 
+- git clone : https://github.com/laravel/laravel.git construindo-app-mvc-laravel7-vep
+- extrair a pasta com o docker-compose (utils)
+- colar na raíz do projeto 
+- 
+
+
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
