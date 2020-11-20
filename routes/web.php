@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// precisava passar o caminho completo 
+
+Route::get('/', 'App\Http\Controllers\EnderecoController@index');
+
+
+// // Route::get( '/', function () {
+// //     return view('busca');
+// });

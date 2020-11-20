@@ -88,6 +88,8 @@ A aplicação:
 - vendor : biblios de terceiros 
 
 - permissão do laravel para storage 
+- apk add docker-compose
+- 
 - apk add sudo 
 - sudo chmod -R 777 storage/logs ( nao fazer em producao )
 -  sudo chmod -R 777 storage/framework 
@@ -99,10 +101,22 @@ A aplicação:
 - php artisan key:generate 
 - a key será criada e adicionada ao .env 
 - em prod guarde a key e nao mostre pra ninguem 
+- eu não consegui abrir o docker-compose up e o projeto ao mesmo tempo no mesmo container. Eu fizo docker-compose up e estou rodando um terminal ao lado 
+
+
+# Criando 
+
+- dentro de views criamos a pasta busca.blade 
+- criamos o enderecocontroller app\Http\Controllers\EnderecoController.php
+ de  para controlar as rotas de uma forma melhor 
+
 - 
+``` Js 
+Route::get('/',  action:'EnderecoController@index');
+});
+```
 
-
-
+- inserimos o bootsrap no busca.blade
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
