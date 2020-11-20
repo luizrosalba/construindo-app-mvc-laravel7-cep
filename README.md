@@ -29,7 +29,11 @@ A aplicação:
 - git clone : https://github.com/laravel/laravel.git construindo-app-mvc-laravel7-vep
 - extrair a pasta com o docker-compose (utils)
 - colar na raíz do projeto 
-
+- cuidado com os pem dos commits 
+- instalando o composer 
+- composer install = npm install 
+- apk add composer
+- composer install --ignore-platform-reqs
 
 # Configurando
 
@@ -42,9 +46,60 @@ A aplicação:
 - apk add git
 - sai e abri de novo para reinicar com git 
 
+# Pastas do projeto : 
 
+- console : classes de commandline 
+- aplicações em BG no cron (kernel.php)
 
+- exceptions : onde ficam todos os tratamentos de exceções 
+- Evita 502,505 na cara do user
+- O laravel pode apresentar um erro amigável para o user 
+- sempre faça handlers de erro 
 
+- http: controllers e middleware , validadores de request ... kernel (configurações e adição de middlewares na aplicação)
+
+- providers : registram dependencias em tempo de execução  : injecão de dependencia 
+- dentro da pasta models user.php (nao apareceu no meu projeto )
+
+- bootstrap : arquivos de conf de load do projeto 
+
+- cache 
+
+- config : arquivos php que retornam arrays com as configs 
+
+- factories - : testes e mocks 
+
+- migrations : representação do bd em php (deletamos as tabelas) 
+
+- seeds : inserções e pre modificações no BD 
+
+- docker : configurações do servidor e do php 
+
+- public : onde tudo inicia , load do projeto 
+
+- resources : todo o html e js (views= templates HTML) 
+
+- routes : todas as rotas 
+
+- storage : arquivos da aplicação 
+
+- tests : testes unitários 
+
+- vendor : biblios de terceiros 
+
+- permissão do laravel para storage 
+- apk add sudo 
+- sudo chmod -R 777 storage/logs ( nao fazer em producao )
+-  sudo chmod -R 777 storage/framework 
+- localhost:89 
+- precisamos acertar a appKEY 
+- apk add make
+- php artisan
+- gerando a key 
+- php artisan key:generate 
+- a key será criada e adicionada ao .env 
+- em prod guarde a key e nao mostre pra ninguem 
+- 
 
 
 
