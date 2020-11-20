@@ -30,6 +30,7 @@ A aplicação:
 - extrair a pasta com o docker-compose (utils)
 - colar na raíz do projeto 
 - cuidado com os pem dos commits 
+- git rm -r --cached myFolder para remover algo do github 
 - instalando o composer 
 - composer install = npm install 
 - apk add composer
@@ -119,6 +120,8 @@ Route::get('/',  action:'EnderecoController@index');
 - inserimos o bootsrap no busca.blade
 
 - vamos implementar a busca pela API de CEP 
+
+
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
