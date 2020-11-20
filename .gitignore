@@ -10,3 +10,7 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+docker/database/ca-key.pem
+docker/database/ca.pem
+docker/database/client-cert.pem
+docker/database/client-key.pem
