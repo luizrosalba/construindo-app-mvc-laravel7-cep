@@ -18,3 +18,4 @@ docker/database/client-key.pem
 /workspace/docker/database/public_key.pem
 /workspace/docker/database/server-cert.pem
 /workspace/docker/database/server-key.pem
+docker
