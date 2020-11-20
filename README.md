@@ -118,6 +118,8 @@ Route::get('/',  action:'EnderecoController@index');
 
 - inserimos o bootsrap no busca.blade
 
+- vamos implementar a busca pela API de CEP 
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">

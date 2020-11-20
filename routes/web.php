@@ -15,7 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 // precisava passar o caminho completo 
 
-Route::get('/', 'App\Http\Controllers\EnderecoController@index');
+Route::get('/', 'App\Http\Controllers\EnderecoController@index')->name('home');
+
+Route::get('/buscar', 'App\Http\Controllers\EnderecoController@buscar')->name('buscar');
 
 
 // // Route::get( '/', function () {
