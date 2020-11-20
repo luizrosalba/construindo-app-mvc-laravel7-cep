@@ -121,6 +121,43 @@ Route::get('/',  action:'EnderecoController@index');
 
 - vamos implementar a busca pela API de CEP 
 
+- api da via cep https://viacep.com.br/
+
+```JS
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
+
+class EnderecoController extends Controller
+{
+    public function index(){
+        return view('busca'); 
+    }
+
+    public function buscar (
+        Request $request 
+    ){
+        $cep = $request-> input ( 'cep'); 
+        // dd($cep); /// mata e nao executa nada alem 
+        //// printa na tela o que está usando 
+        $response = Http::get("viacep.com.br/ws/$cep/json/")->json();
+        dd($response);
+        
+    }
+}
+```
+
+
+# Formatando a view 
+
+fizemos uma request get http no endereco controller e usamos a reposnse chamada em adicionarblade para mostrar o resultado desta busca 
+
+# Guardando a informação no banco 
+
+- vamos validar a request usando uma classe 
 
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
