@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\Endereco\SalvarRequest;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+
 
 class EnderecoController extends Controller
 {
@@ -33,23 +36,9 @@ class EnderecoController extends Controller
 
 
     public function salvar (
-        Request $request 
+        SalvarRequest $request 
     ){
-        $cep = $request-> input ( 'cep'); 
-        // dd($cep); /// mata e nao executa nada alem 
-        //// printa na tela o que está usando 
-        $response = Http::get("viacep.com.br/ws/$cep/json/")->json();
-        // dd($response);
-        return view ('adicionar')->with (
-            [
-                'cep' => $request->input('cep'),
-                'logradouro'=> $response['logradouro'],
-                'bairro'=> $response['bairro'],
-                'cidade'=> $response['localidade'],
-                'estado'=> $response['uf'],
-            ]
-        );
-        
+      dd($request->all());
     }
 
 }

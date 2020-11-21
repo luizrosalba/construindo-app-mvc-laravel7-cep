@@ -16,8 +16,21 @@
     <h1 class="mb-5">
         Adicionar CEP 
     </h1>
-  <form action="{{route('buscar')}}" method="GET">
-  
+    <!-- pode-se customizar em portugues as mensagens de erro  -->
+    <!-- na documentaçao do laravel tem explicações sobre isso  -->
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
+  <form action="{{route('salvar')}}" method="POST">
+  <!-- csrf cria uma hash valida apenas para a proxima requisicao -->
+  @csrf  
   <div class="form-group">
     <label >CEP</label>
     <input type="text" class="form-control" name="cep"  value="{{$cep}}">

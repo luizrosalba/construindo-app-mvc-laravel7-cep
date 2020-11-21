@@ -29,6 +29,7 @@ A aplicação:
 - git clone : https://github.com/laravel/laravel.git construindo-app-mvc-laravel7-vep
 - extrair a pasta com o docker-compose (utils)
 - colar na raíz do projeto 
+- iniciar o container e attach to container php 
 - cuidado com os pem dos commits 
 - git rm -r --cached myFolder para remover algo do github 
 - instalando o composer 
@@ -158,6 +159,7 @@ fizemos uma request get http no endereco controller e usamos a reposnse chamada 
 # Guardando a informação no banco 
 
 - vamos validar a request usando uma classe 
+- php artisan make:request Endereco/SalvarRequest
 
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>

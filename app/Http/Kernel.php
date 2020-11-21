@@ -35,7 +35,7 @@ class Kernel extends HttpKernel
             \Illuminate\Session\Middleware\StartSession::class,
             // \Illuminate\Session\Middleware\AuthenticateSession::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
-            \App\Http\Middleware\VerifyCsrfToken::class,
+            \App\Http\Middleware\VerifyCsrfToken::class,   /// posso remover a classe que é executada no meio da requisicao que me faz ter que fazer o @csrf 
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
 
