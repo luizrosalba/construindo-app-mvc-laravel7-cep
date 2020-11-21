@@ -11,6 +11,10 @@ A aplicação:
 - Utilizamos Docker para facilitar as configurações de ambiente 
 
 
+![](1.PNG)
+
+
+
 
 # Laravel 
 
@@ -174,6 +178,15 @@ fizemos uma request get http no endereco controller e usamos a reposnse chamada 
 - vamos criar outro model (sempre com o mesmo nome da tabela)
 
 - vamos mostrar essas informações salvas no DB 
+
+- php artisan migrate:fresh (limpa tudo e executa as migrations )
+
+- fizemos um validador por sessao para evitar cadastrar duas vezes o mesmo cep 
+
+# Herança de template 
+
+usamos um appblade e cada conteudo sera renderizado ali dentro 
+
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 

@@ -50,6 +50,7 @@ class EnderecoController extends Controller
     public function salvar(
         SalvarRequest $request
     ) {
+        //// so cria se nao existir , senao retorna o que jah existe 
         $endereco = Endereco::where('cep', $request->input('cep'))->first();
 
         if (!$endereco) {
@@ -63,7 +64,7 @@ class EnderecoController extends Controller
                     'estado' => $request->input('estado'),
                 ]
             );
-
+            /// nome da sessao criada (sucesso )
             return redirect('/')->withSucesso('Endereço salvo com sucesso!');
         }
 
