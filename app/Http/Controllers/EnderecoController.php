@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\Endereco\SalvarRequest;
+use App\Models\Endereco;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
@@ -10,8 +11,19 @@ use Illuminate\Support\Facades\Http;
 
 class EnderecoController extends Controller
 {
-    public function index(){
-        return view('busca'); 
+    public function index()
+    {
+        $enderecos = Endereco::all(); /// busca todas as linhas da tablea e retorna uma collection 
+        return view('listagem')->with(
+            [
+                'enderecos' => $enderecos,
+            ]
+        );
+    }
+
+    public function adicionar()
+    {
+        return view('busca');
     }
 
     public function buscar (
@@ -34,11 +46,28 @@ class EnderecoController extends Controller
         
     }
 
+    ///salvando as ifnormações 
+    public function salvar(
+        SalvarRequest $request
+    ) {
+        $endereco = Endereco::where('cep', $request->input('cep'))->first();
 
-    public function salvar (
-        SalvarRequest $request 
-    ){
-      dd($request->all());
+        if (!$endereco) {
+            Endereco::create(
+                [
+                    'cep' => $request->input('cep'),
+                    'logradouro' => $request->input('logradouro'),
+                    'numero' => $request->input('numero'),
+                    'bairro' => $request->input('bairro'),
+                    'cidade' => $request->input('cidade'),
+                    'estado' => $request->input('estado'),
+                ]
+            );
+
+            return redirect('/')->withSucesso('Endereço salvo com sucesso!');
+        }
+
+        return redirect('/')->withErro('O endereço já esta cadastrado!');
     }
 
 }

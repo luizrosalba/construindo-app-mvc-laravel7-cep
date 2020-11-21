@@ -160,7 +160,20 @@ fizemos uma request get http no endereco controller e usamos a reposnse chamada 
 
 - vamos validar a request usando uma classe 
 - php artisan make:request Endereco/SalvarRequest
+- fizemos a validação dizendo que todos os campos são requess 
+- nosso banco está limpo 
+- vamos criar a tabela em migrations atravpes do artsan 
+- php artisan make:migration cria_tabela_enderecos
+- cria as migrations com timestamp 
+- pode-se mudar a timespamp sem problemas 
+- php artisan migrate
+- dentro do mysql 
+- show tables (msotra as tabelas criadas)
+- select * from migrations; mostra as tabelas 
+- desc enderecos; mostra os campos 
+- vamos criar outro model (sempre com o mesmo nome da tabela)
 
+- vamos mostrar essas informações salvas no DB 
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
